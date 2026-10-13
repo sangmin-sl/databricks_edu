@@ -13,10 +13,8 @@ variables:
     description: The catalog to use
   schema:
     description: The schema to use
-  group_name:
-    description: 
   sp_id :
-     description:    
+     description:  ss
 
 targets:
   dev:
@@ -37,7 +35,6 @@ targets:
     variables:
       catalog: workspace
       schema: ${workspace.current_user.short_name}
-      group_name: data-engineer
       sp_id : 21be6765-f82d-4cfa-b203-8c3216e53e57
 
 
@@ -56,8 +53,7 @@ targets:
     variables:
       catalog: workspace
       schema: prod
-      group_name:  data-engineer
-      sp_id: dosed79c1263fff09cfaa94dc5ad58799130
+      sp_id: d1185284-4f87-4c40-9e68-ddb31350c87e
     permissions:
       - service_principal_name: d1185284-4f87-4c40-9e68-ddb31350c87e
         level: CAN_MANAGE
