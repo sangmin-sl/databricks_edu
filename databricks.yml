@@ -22,6 +22,14 @@ targets:
     # See also https://docs.databricks.com/dev-tools/bundles/deployment-modes.html.
     mode: development
     default: true
+#https://github.com/sangmin-sl/databricks_edu.git
+
+    git: 
+      origin_url: https://github.com/sangmin-sl/databricks_edu.git
+      branch : main
+
+
+
     workspace:
       host: https://dbc-440f1d22-290f.cloud.databricks.com
     variables:
@@ -29,6 +37,12 @@ targets:
       schema: ${workspace.current_user.short_name}
   prod:
     mode: production
+
+    git:
+      origin_url: https://github.com/sangmin-sl/databricks_edu.git
+      branch: main
+
+
     workspace:
       host: https://dbc-440f1d22-290f.cloud.databricks.com
       # We explicitly deploy to /Workspace/Users/21be6765-f82d-4cfa-b203-8c3216e53e57 to make sure we only have a single copy.
